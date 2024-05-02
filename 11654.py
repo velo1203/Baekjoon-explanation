@@ -1,4 +1,4 @@
 import sys
 input = sys.stdin.readline
-s = input()
-print(len(s)- 1)
+t = input()
+print(ord(t[0]))
