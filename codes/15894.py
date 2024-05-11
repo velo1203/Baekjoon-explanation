@@ -1,3 +1,3 @@
 num = int(input())
-base = 2
 
+print(num*4)
