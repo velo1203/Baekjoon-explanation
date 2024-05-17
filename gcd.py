@@ -1,8 +1,7 @@
 def gcd(A,B):
     while True:
-        c = A % B
-        if c == 0:
+        if A % B == 0:
             break
-        A = B
-        B = c
+        A,B=B,A%B
     return B
+
