@@ -1,11 +1,16 @@
 import sys
 input = sys.stdin.readline
 
-length = []
+A = []
 num = int(input())
 for n in range(num):
-    length.append(int(input()))
+    A.append(int(input()))
 
-length.sort()
-for l in length:
-    print(l)
+
+
+for l in range(num-1):
+    for i in range(num-1-l):
+        if A[i] > A[i+1]:
+            A[i],A[i+1] = A[i+1],A[i]
+
+print(A)
