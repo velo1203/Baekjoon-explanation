@@ -3,25 +3,25 @@ input = sys.stdin.readline
 
 se = set()
 
-length =int(input())
-for n in range(length):
+length = int(input().strip())
+for _ in range(length):
     command = input().strip().split()
     if command[0] == "add":
-        se.add(command[1])
+        se.add(int(command[1]))
     elif command[0] == "remove":
-        if command[1] in se:
-            se.remove(command[1])
+        se.discard(int(command[1]))
     elif command[0] == "check":
-        if command[1] in se:
+        if int(command[1]) in se:
             print(1)
         else:
             print(0)
     elif command[0] == "toggle":
-        if command[1] in se:
-            se.remove(command[1])
+        num = int(command[1])
+        if num in se:
+            se.remove(num)
         else:
-            se.add(command[1])
+            se.add(num)
     elif command[0] == "all":
-        se = set(range(1,21))
+        se = set(range(1, 21))
     elif command[0] == "empty":
-        se = set()
+        se.clear()
