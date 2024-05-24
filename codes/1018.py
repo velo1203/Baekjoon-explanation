@@ -25,3 +25,7 @@ for a in range(n-7):
         cnt.append(w_index) 
         cnt.append(b_index) 
 print(min(cnt))
+
+
+
+
