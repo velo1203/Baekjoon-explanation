@@ -4,4 +4,3 @@ def gcd(A,B):
             break
         A,B=B,A%B
     return B
-
