@@ -16,7 +16,7 @@ def bfs(graph, start):
         print(vertex, end=' ')  # 방문한 정점을 출력합니다.
 
         # 현재 정점의 모든 인접 정점을 확인합니다.
-        for neighbor in graph[vertex]:
+        for neighbor in sorted( graph[vertex]):
             if neighbor not in visited:
                 # 인접 정점을 방문한 것으로 표시하고 큐에 추가합니다.
                 visited.add(neighbor)
@@ -30,7 +30,7 @@ def dfs(graph, start):
         if node not in visited:
             print(node,end=" ")
             visited.add(node)
-            stack.extend(reversed(graph[node]))
+            stack.extend(sorted(graph[node],reverse=True))
 
 
 N, M, start = map(int, input().split())
