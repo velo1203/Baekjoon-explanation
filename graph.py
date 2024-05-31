@@ -12,3 +12,4 @@ for _ in range(M):
     u, v = map(int, input().split())
     graph[u].append(v)
     graph[v].append(u)  # 양방향 간선이므로 반대 방향도 추가
+
